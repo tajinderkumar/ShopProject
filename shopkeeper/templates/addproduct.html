@@ -1,0 +1,128 @@
+{% extends 'adminmaster.html' %}
+{% block content %}
+<form class="form-horizontal" method="post">
+  {% csrf_token %}
+  <div class="form-group">
+    <label for="producttype" class="col-sm-2 control-label">Select Product Type</label>
+    <div class="col-sm-10">
+      <select name="producttype" id="producttype">
+        <option>
+          {% for i in dict_ptype %}
+            <option value="{{i.tbproducttypeid}}">{{i.tbproducttypename}}</option>
+          {% endfor %}
+        </option>
+      </select>
+    </div>
+  </div>
+   <div class="form-group">
+    <label for="productcategory" class="col-sm-2 control-label">Select Product Category</label>
+    <div class="col-sm-10">
+      <select name="productcategory" id="productcategory">
+        <option>
+          {% for i in dict_pcategory %}
+            <option value="{{i.tbcategoryid}}">{{i.tbcategorytype}}</option>
+          {% endfor %}
+
+        </option>
+      </select>
+    </div>
+  </div>
+   <div class="form-group">
+    <label for="productbrand" class="col-sm-2 control-label">Select Brand</label>
+    <div class="col-sm-10">
+      <select name="productbrand" id="productbrand">
+        <option>
+          {% for i in dict_pbrand %}
+            <option value="{{i.tbbrandid}}">{{i.tbbrandname}}</option>
+          {% endfor %}
+
+        </option>
+      </select>
+    </div>
+  </div>
+   <div class="form-group">
+    <label for="productsubcategory" class="col-sm-2 control-label">Select Subcategory</label>
+    <div class="col-sm-10">
+      <select name="productsubcategory" id="productsubcategory">
+        <option>
+          {% for i in dict_psubcategory %}
+            <option value="{{i.tbsubcategoryid}}">{{i.tbsubcategoryname}}</option>
+          {% endfor %}
+
+        </option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="productname" class="col-sm-2 control-label">Product Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="productname" placeholder="Product Name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="productprice" class="col-sm-2 control-label">Price</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="productprice" placeholder="Price">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="productquantity" class="col-sm-2 control-label">Product Quantity</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="productquantity" placeholder="Quantity">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="productdescription" class="col-sm-2 control-label">Product Description</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="productdescription" placeholder="Description">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="productimage1" class="col-sm-2 control-label">Image1</label>
+    <div class="col-sm-10">
+      <input type="file" class="form-control" id="productimage1" name="productimage1" >
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="productimage2" class="col-sm-2 control-label">Image2</label>
+    <div class="col-sm-10">
+      <input type="file" class="form-control" id="productimage2" name="productimage2">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="productimage3" class="col-sm-2 control-label">Image3</label>
+    <div class="col-sm-10">
+      <input type="file" class="form-control" id="productimage3" name="productimage3">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="productimage4" class="col-sm-2 control-label">Image4</label>
+    <div class="col-sm-10">
+      <input type="file" class="form-control" id="productimage4" name="productimage4" >
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="productimage5" class="col-sm-2 control-label">Image5</label>
+    <div class="col-sm-10">
+      <input type="file" class="form-control" id="productimage5" name="productimage5">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="productimage6" class="col-sm-2 control-label">Image6</label>
+    <div class="col-sm-10">
+      <input type="file" class="form-control" id="productimage6" name="productimage6">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="productimage7" class="col-sm-2 control-label">Image7</label>
+    <div class="col-sm-10">
+      <input type="file" class="form-control" id="productimage7" name="productimage7">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Add</button>
+    </div>
+  </div>
+</form>
+{% endblock%}

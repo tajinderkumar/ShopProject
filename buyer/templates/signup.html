@@ -1,0 +1,93 @@
+{% extends 'buyermaster.html' %}
+{% block content %}
+<div class="login">
+		<div class="main-agileits">
+				<div class="form-w3agile form1">
+					<h3>Register</h3>
+
+					<hr>
+
+						<form  method="post" enctype="multipart/form-data">
+							<select name="dropdown">
+							<option value="0">Select User</option>
+							<option value="1">Buyer</option>
+							<option value="2">Shopkeeper</option>
+							</select>
+							{% csrf_token %}
+							<div id="commonsection">
+							<div class="key">
+								<i class="fa fa-user" aria-hidden="true"></i>
+								<input type="text" value="name" name="txtname" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'name';}" required="">
+								<div class="clearfix"></div>
+							</div>
+							<div class="key">
+								<i class="fa fa-envelope" aria-hidden="true"></i>
+								<input type="text" value="Email" name="txtemail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
+								<div class="clearfix"></div>
+							</div>
+
+							<div class="key">
+								<i class="fa fa-envelope" aria-hidden="true"></i>
+								<input type="text" value="phone" name="txtphone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'phone';}" required="">
+								<div class="clearfix"></div>
+							</div>
+							<div class="key">
+								<i class="fa fa-envelope" aria-hidden="true"></i>
+								<input type="text" value="alternate phone" name="txtaltphone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'alternate phone';}" required="">
+								<div class="clearfix"></div>
+							</div>
+							<div class="key">
+								<i class="fa fa-envelope" aria-hidden="true"></i>
+								<input type="file" value="userimage" name="userimage" required="">
+								<div class="clearfix"></div>
+							</div>
+							<div class="key">
+								<i class="fa fa-envelope" aria-hidden="true"></i>
+								<input type="text" value="address" name="txtaddress" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'address';}" required="">
+								<div class="clearfix"></div>
+							</div>
+								<div class="key">
+								<i class="fa fa-envelope" aria-hidden="true"></i>
+								<input type="text" value="pincode" name="txtpincode" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'pincode';}" required="">
+								<div class="clearfix"></div>
+							</div>
+							<div class="key">
+								<i class="fa fa-lock" aria-hidden="true"></i>
+								<input type="password" value="Password" name="txtpassword" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
+								<div class="clearfix"></div>
+							</div>
+							<div class="key">
+								<i class="fa fa-lock" aria-hidden="true"></i>
+								<input type="password" value="Confirm Password" name="txtconfirm Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Confirm Password';}" required="">
+								<div class="clearfix"></div>
+							</div>
+							</div>
+							<div id="shopsection">
+							<div class="key">
+								<i class="fa fa-envelope" aria-hidden="true"></i>
+								<input type="text" value="adhar number" name="txtadhar" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'adhar number';}">
+								<div class="clearfix"></div>
+							</div>
+							<div class="key">
+								<i class="fa fa-envelope" aria-hidden="true"></i>
+								<input type="file" value="adharimage" name="adharimage">
+								<div class="clearfix"></div>
+							</div>
+							<div class="key">
+								<i class="fa fa-envelope" aria-hidden="true"></i>
+								<input type="text" value="Pan number" name="txtpan" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'pan number';}">
+								<div class="clearfix"></div>
+							</div>
+							<div class="key">
+								<i class="fa fa-envelope" aria-hidden="true"></i>
+								<input type="file" value="panimage" name="panimage">
+								<div class="clearfix"></div>
+							</div>
+								</div>
+							<input type="submit" value="Submit">
+						</form>
+				</div>
+
+			</div>
+		</div>
+{% endblock %}

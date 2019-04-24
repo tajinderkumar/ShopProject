@@ -1,0 +1,35 @@
+{% extends 'adminmaster.html' %}
+{% block content%}
+    <div class="text-center">
+				<div class="main-agileits">
+					<div class="form-w3agile">
+                        <br>
+                        <br>
+                        <hr>
+						<h3>ADD SIZE</h3>
+						<form  method="post">
+							{% csrf_token %}
+							<div class="key">
+								<label>select category</label>
+								<select name="categoryid">
+									<option>
+									{% for i in category %}
+									  <option value="{{i.tbcategoryid}}"> {{i.tbcategorytype}}</option>
+									{% endfor %}
+									</option>
+								</select>
+								<div class="clearfix"></div>
+							</div>
+							<div class="key">
+								<label>Add Size </label>&nbsp&nbsp&nbsp&nbsp
+								<input type="text" name="txtproductsize" id="txtproductsize">
+								<div class="clearfix"></div>
+							</div>
+
+
+							<input type="submit" value="ADD">
+						</form>
+					</div>
+				</div>
+				</div>
+{% endblock %}

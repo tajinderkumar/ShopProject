@@ -1,0 +1,36 @@
+{% extends 'buyermaster.html' %}
+{% block content %}
+
+<div class="login">
+				<div class="main-agileits">
+					<div class="form-w3agile">
+						<h3>Login To S A T</h3>
+						<form  method="post">
+							{% csrf_token %}
+							{% if wronguname %}
+							<script>alert('wrong email id');</script>
+							{% endif %}
+							{% if wrongpassword %}
+							<script>alert('wrong PASSWORD');</script>
+							{% endif %}
+							<div class="key">
+								<i class="fa fa-envelope" aria-hidden="true"></i>
+								<input type="text"  name="logintxtemail" id="logintxtemail">
+								<div class="clearfix"></div>
+							</div>
+							<div class="key">
+								<i class="fa fa-lock" aria-hidden="true"></i>
+								<input type="password" value="Password" name="logintxtpassword" required="">
+								<div class="clearfix"></div>
+							</div>
+							<input type="submit" value="Login">
+						</form>
+					</div>
+					<div class="forg">
+						<a href="#" class="forg-left">Forgot Password</a>
+						<a href="{% url 'buyer:signup' %}" class="forg-right">Register</a>
+						<div class="clearfix"></div>
+				</div>
+				</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'adminmaster.html' %}
+{% block content%}
+    <div class="text-center">
+				<div class="main-agileits">
+					<div class="form-w3agile">
+                        <br>
+                        <br>
+                        <hr>
+						<h3>ADD BRAND</h3>
+						<form  method="post">
+							{% csrf_token %}
+							<div class="key">
+								<i class="fa fa-envelope" aria-hidden="true"></i>
+								<input type="text"  name="txtproductbrand" id="txtproductbrand">
+								<div class="clearfix"></div>
+							</div>
+							<input type="submit" value="ADD">
+						</form>
+					</div>
+				</div>
+				</div>
+{% endblock %}
